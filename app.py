@@ -5,7 +5,9 @@ from flask_cors import CORS
 import numpy as np
 import pandas as pd
 
-app=Flask(__name__)
+application = Flask(__name__)    # initializing flask
+app = application
+
 model=pickle.load(open('model.pkl','rb'))
 @app.route('/')
 def home():
